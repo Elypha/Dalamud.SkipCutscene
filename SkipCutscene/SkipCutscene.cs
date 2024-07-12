@@ -63,25 +63,20 @@ namespace Plugins.a08381.SkipCutscene
         }
 
         public string Name => "SkipCutscene";
-        
+
         [PluginService]
-        [RequiredVersion("1.0")]
-        public static DalamudPluginInterface Interface { get; private set; }
-        
+        public static IDalamudPluginInterface Interface { get; private set; }
+
         [PluginService]
-        [RequiredVersion("1.0")]
         public static ISigScanner SigScanner { get; private set; }
 
         [PluginService]
-        [RequiredVersion("1.0")]
         public static ICommandManager CommandManager { get; private set; }
-        
+
         [PluginService]
-        [RequiredVersion("1.0")]
         public static IChatGui ChatGui { get; private set; }
 
         [PluginService]
-        [RequiredVersion("1.0")]
         public static IPluginLog PluginLog { get; private set; }
 
         public CutsceneAddressResolver Address { get; }
